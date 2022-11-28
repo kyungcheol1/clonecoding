@@ -20,7 +20,6 @@ a {
     width: 1200px;
     margin: 0 auto;
     height: 200px;
-    background-color: silver;
     border-bottom: 1px solid ;
 }
 
@@ -33,7 +32,7 @@ a {
 
 #headwrap > #head_top > #head_topbar {
     float: left;
-    padding-left: 150px;
+    padding-left: 140px;
     box-sizing: border-box;
 }
 
@@ -84,8 +83,82 @@ a {
 
 #headwrap > #head_top > .head_topmenu {
     float: left;
+    position: relative;
     font-size: 12px;
-    margin-left: 10px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+#headwrap > #head_top > .head_topmenu::after {
+    content: "▾";
+}
+
+#headwrap > #head_top > .head_topmenu > .on {
+    position: absolute;
+    transition: all 0.5s;
+}
+
+#headwrap > #head_top > .head_topmenu > .off {
+    display: none;
+    position: absolute;
+}
+
+#head_hide {
+    position: absolute;
+    top: 10px;
+    width: 330px;
+    height: 270px;
+    padding: 20px;
+    border: 1px solid #ececec;
+    background: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+#head_hide_animation{
+    position: absolute;
+    display: block;
+    width: 290px;
+    height: 230px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+#head_hide_animation::-webkit-scrollbar {
+    width: 2px;
+}
+
+#head_hide_animation::-webkit-scrollbar-thumb {
+    background-color: #000;
+    height: 150px;
+}
+
+#head_hide_animation > li {
+    float: left;
+    width: 135px;
+    height: 34px;
+}
+
+#head_hide_animation > li+li+li {
+    margin-top: 16px;
+}
+
+#head_hide_animation > li > a > .img_box > img {
+    float: left;
+    width: 34px;
+    height: 34px;
+}
+
+#head_hide_animation > li > a > .text_box {
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 34px;
+    color: #040404;
+    font-size: 12px;
+    padding-left: 10px;
+    font-weight: bold;
+    box-sizing: border-box;
 }
 
 #headwrap > #head_top > #user_menu {
@@ -132,6 +205,7 @@ a {
 }
 
 #headwrap > #head_middle > #search {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -166,6 +240,16 @@ a {
     height: 30px;
     background-size: 30px 30px;
     background-image: url(https://contents.kyobobook.co.kr/resources/fo/images/common/ink/btn_header_search@2x.png);
+}
+
+#headwrap > #head_middle > #search > #search_popup {
+    position: absolute;
+    left: 0px;
+    top: 60px;
+    width : 994px;
+    height: 728px;
+    border: 1px solid #000;
+    border-radius: 15px;
 }
 
 #headwrap > #head_middle > #basket {
@@ -203,9 +287,14 @@ a {
     display: block;
     width: 40px;
     height: 40px;
-    border: 1px solid #000;
+    margin-left: 10px;
     border-radius: 20px;
+    background-size: 40px 40px;
+    cursor: pointer;
+    background-image: url(https://contents.kyobobook.co.kr/resources/fo/images/common/ink/btn_anb_open@2x.png);
 }
+
+
 
 #headwrap > #head_gnb > #gnb {
     display: flex;
@@ -224,6 +313,34 @@ a {
     color:#000;
     font-weight: bold;
 }
+
+#headwrap > #head_gnb > #plusmenu {
+    margin-left: 400px;
+    display: flex;
+}
+
+#headwrap > #head_gnb > #plusmenu > li+li::before{
+    content: "•";
+    margin: 0 8px;
+}
+
+#headwrap > #head_gnb > #plusmenu > li > a {
+    font-size: 12px;
+    color: #000;
+}
+
+#headwrap > #head_gnb > #plusmenu > span {
+    display: block;
+    margin: 5px 0 0 10px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 8px;
+    background-size: 15px 15px;
+    background-image: url(https://contents.kyobobook.co.kr/resources/fo/images/common/ink/btn_gnb_service_more@2x.png);
+}
+
+
 
 
 /*https://www.kyobobook.co.kr/assets/images/common/img_service_mall_tab.svg#pathTab*/
