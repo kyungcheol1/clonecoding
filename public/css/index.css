@@ -95,11 +95,11 @@ a {
 
 #headwrap > #head_top > .head_topmenu > .on {
     position: absolute;
-    opacity: 1;
+    transition: all 0.5s;
 }
 
 #headwrap > #head_top > .head_topmenu > .off {
-    opacity: 0;
+    display: none;
     position: absolute;
 }
 
@@ -205,6 +205,7 @@ a {
 }
 
 #headwrap > #head_middle > #search {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -239,6 +240,16 @@ a {
     height: 30px;
     background-size: 30px 30px;
     background-image: url(https://contents.kyobobook.co.kr/resources/fo/images/common/ink/btn_header_search@2x.png);
+}
+
+#headwrap > #head_middle > #search > #search_popup {
+    position: absolute;
+    left: 0px;
+    top: 60px;
+    width : 994px;
+    height: 728px;
+    border: 1px solid #000;
+    border-radius: 15px;
 }
 
 #headwrap > #head_middle > #basket {
