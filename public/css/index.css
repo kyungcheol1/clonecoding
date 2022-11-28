@@ -32,7 +32,7 @@ a {
 
 #headwrap > #head_top > #head_topbar {
     float: left;
-    padding-left: 150px;
+    padding-left: 140px;
     box-sizing: border-box;
 }
 
@@ -83,8 +83,82 @@ a {
 
 #headwrap > #head_top > .head_topmenu {
     float: left;
+    position: relative;
     font-size: 12px;
-    margin-left: 10px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+#headwrap > #head_top > .head_topmenu::after {
+    content: "▾";
+}
+
+#headwrap > #head_top > .head_topmenu > .on {
+    position: absolute;
+    opacity: 1;
+}
+
+#headwrap > #head_top > .head_topmenu > .off {
+    opacity: 0;
+    position: absolute;
+}
+
+#head_hide {
+    position: absolute;
+    top: 10px;
+    width: 330px;
+    height: 270px;
+    padding: 20px;
+    border: 1px solid #ececec;
+    background: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+#head_hide_animation{
+    position: absolute;
+    display: block;
+    width: 290px;
+    height: 230px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+#head_hide_animation::-webkit-scrollbar {
+    width: 2px;
+}
+
+#head_hide_animation::-webkit-scrollbar-thumb {
+    background-color: #000;
+    height: 150px;
+}
+
+#head_hide_animation > li {
+    float: left;
+    width: 135px;
+    height: 34px;
+}
+
+#head_hide_animation > li+li+li {
+    margin-top: 16px;
+}
+
+#head_hide_animation > li > a > .img_box > img {
+    float: left;
+    width: 34px;
+    height: 34px;
+}
+
+#head_hide_animation > li > a > .text_box {
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 34px;
+    color: #040404;
+    font-size: 12px;
+    padding-left: 10px;
+    font-weight: bold;
+    box-sizing: border-box;
 }
 
 #headwrap > #head_top > #user_menu {
