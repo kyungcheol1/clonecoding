@@ -250,6 +250,34 @@ a {
     height: 728px;
     border: 1px solid #000;
     border-radius: 15px;
+    background-color: white;
+}
+
+#search_popup > .content {
+    width: 954px;
+    height: 688px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#search_popup > .content > div {
+    width: 954px;
+    height: 300px;;
+}
+
+#search_popup > .content > div > h3 {
+    margin-bottom: 20px;
+}
+
+#search_popup > .content > div > span > .tag {
+    display: inline-block;
+    font-size: 14px;
+    padding: 6px 16px 8px;
+    background-color: #f7f7f7;
+    border: 1px solid #f7f7f7;
+    border-radius: 20px;
+    color: #595959;
+    margin: 4px 3px;
 }
 
 #headwrap > #head_middle > #basket {
