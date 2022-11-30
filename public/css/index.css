@@ -23,6 +23,9 @@ a {
     border-bottom: 1px solid ;
 }
 
+
+/*head top*/
+
 #headwrap > #head_top {
     display: flex;
     align-items: center;
@@ -96,12 +99,15 @@ a {
 #headwrap > #head_top > .head_topmenu > .on {
     position: absolute;
     transition: all 0.5s;
+    z-index: 11;
 }
 
 #headwrap > #head_top > .head_topmenu > .off {
     display: none;
     position: absolute;
 }
+
+/*head hide (on off)*/
 
 #head_hide {
     position: absolute;
@@ -161,6 +167,8 @@ a {
     box-sizing: border-box;
 }
 
+/*head top animation 끝*/
+
 #headwrap > #head_top > #user_menu {
     float: left;
     margin-left: 80px;
@@ -185,6 +193,8 @@ a {
     padding: 0 0 0 7px;
     box-sizing: border-box;
 }
+
+/*head middle*/
 
 #headwrap > #head_middle {
     display: flex;
@@ -219,8 +229,14 @@ a {
 }
 
 #headwrap > #head_middle > #search > #select > #selectbar{
-    border: none;
-    
+    border: 1px solid transparent;
+    width: 160px;
+    font-size: 14px;
+    color: #040404;
+    font-weight: bold;
+    height: 48px;
+    text-align: center;
+    border-radius: 25px;
 }
 
 #headwrap > #head_middle > #search > #searchinput {
@@ -242,15 +258,178 @@ a {
     background-image: url(https://contents.kyobobook.co.kr/resources/fo/images/common/ink/btn_header_search@2x.png);
 }
 
+/*search popup*/
+
 #headwrap > #head_middle > #search > #search_popup {
     position: absolute;
     left: 0px;
-    top: 60px;
+    top: 55px;
     width : 994px;
     height: 728px;
     border: 1px solid #000;
     border-radius: 15px;
+    background-color: white;
 }
+
+#headwrap > #head_middle > #search > .on {
+    position: absolute;
+    display: block;
+    z-index: 11;
+}
+
+#headwrap > #head_middle > #search > .off {
+    position: absolute;
+    display: none;
+}
+
+#search_popup > .content {
+    width: 954px;
+    height: 688px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#search_popup > .content > .top {
+    width: 954px;
+    height: 190px;;
+}
+
+#search_popup > .content > .top > h3 {
+    margin-bottom: 20px;
+}
+
+#search_popup > .content > .top > span > .tag {
+    display: inline-block;
+    font-size: 14px;
+    padding: 6px 16px 8px;
+    background-color: #f7f7f7;
+    border: 1px solid #f7f7f7;
+    border-radius: 20px;
+    color: #595959;
+    margin: 4px 3px;
+}
+
+#search_popup > .content > .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    height:420px;
+    justify-content: space-evenly;
+    
+}
+
+#search_popup > .content > .bottom > div > h3 {
+    margin-bottom: 20px;
+}
+
+#search_popup > .content > .bottom > .side {
+    width: 270px;
+    height: 420px;
+}
+
+#search_popup > .content > .bottom > .main {
+    width: 300px;
+    height: 420px;
+    overflow: hidden;
+}
+
+#search_popup > .content > .bottom > .main > h3 > span {
+    display: inline-block;
+    font-size: 12px;
+    color: #595959;
+    padding: 2px;
+}
+
+#search_popup > .content > .bottom > .main > h3 > .popuppre {
+    cursor: pointer;
+}
+
+#search_popup > .content > .bottom > .main > h3 > .popupnext {
+    cursor: pointer;
+}
+
+#search_popup > .content > .bottom > .main > #product {
+    position: relative;
+    display: flex;
+}
+
+#search_popup > .content > .bottom > .main > .page1 {
+    position: relative;
+    left: 0px;
+    transition: all 1s;
+}
+
+#search_popup > .content > .bottom > .main > .page2 {
+    position: relative;
+    left: -300px;
+    transition: all 1s;
+}
+
+#search_popup > .content > .bottom > .main > #product > ul {
+    width: 300px;
+    height: 380px;
+}
+
+#search_popup > .content > .bottom > .main > #product > ul > .list {
+    width: 300px;
+    height: 80px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+#search_popup > .content > .bottom > .main > #product > ul > .list > a > .imgbox {
+    display: block;
+    width: 43px;
+    height: 61px;
+    float: left;
+}
+
+#search_popup > .content > .bottom > .main > #product > ul > .list > a > .imgbox > img {
+    width: 43px;
+    height: 61px;
+}
+
+#search_popup > .content > .bottom > .main > #product > ul > .list > a > span {
+    display: inline-block;
+    font-size: 12px;
+    width: 230px;
+    height: 61px;
+    padding: 15px 0 15px 7px;
+    box-sizing: border-box;
+    color: #595959;
+    font-weight: bold;
+}
+
+#search_popup > .content > .bottom > .side > ul > li {
+    width: 270px;
+    height: 28px;
+    padding: 5px 5px;
+}
+
+#search_popup > .content > .bottom > .side > ul > li > a {
+    font-size: 14px;
+    color: #595959;
+    font-weight: bold;
+}
+
+#search_popup > .content > .bottom > .side > ul > li > a > span {
+    display: inline-block;
+    width:30px;
+}
+
+#search_popup > .content > .bottom > .side > ul > li > a > .ranked {
+    color: #3c9a17;
+}
+
+
+
+
+#search_popup > .content > .bottom > .button {
+    width: 100%;
+    height: 20px;
+}
+
+
 
 #headwrap > #head_middle > #basket {
     margin-left: 250px;
@@ -293,8 +472,6 @@ a {
     cursor: pointer;
     background-image: url(https://contents.kyobobook.co.kr/resources/fo/images/common/ink/btn_anb_open@2x.png);
 }
-
-
 
 #headwrap > #head_gnb > #gnb {
     display: flex;
@@ -339,6 +516,113 @@ a {
     background-size: 15px 15px;
     background-image: url(https://contents.kyobobook.co.kr/resources/fo/images/common/ink/btn_gnb_service_more@2x.png);
 }
+
+/*visual*/
+
+#visualwrap {
+    width:100%;
+}
+
+#visual {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#visual > #banner {
+    margin-top: 50px;
+    width: 1200px;
+    height: 570px;
+    position: relative;
+    z-index: 1;
+}
+
+#visual > #banner > #banner_img > li {
+    position: absolute;
+    opacity: 0;
+    transition: all 2s;
+}
+
+#visual > #banner > #banner_img > .on {
+    position: absolute;
+    opacity: 1;
+    transition: all 2s;
+}
+
+#visual > #banner > #banner_img > li > a > p {
+    font-size: 34px;
+    margin-left: 50px;
+    font-weight: bold;
+    color:#000
+}
+
+#visual > #banner > #banner_img > li > a > div {
+    margin-top: 20px;
+}
+
+#visual > #fix_img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+}
+
+#visual > #fix_img > .fix_number {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    top: 50px;
+    right: 300px;
+    z-index: 10;
+}
+
+#visual > #fix_img > .fix_number > .total::before {
+    content: "-";
+    color:#ccc;
+} 
+
+#visual > #fix_img > .fix_number > .total {
+    color: #ccc;
+}
+
+#visual > #fix_img > .imgbox {
+    width: 273px;
+    height: 330px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#visual > #fix_img > .imgbox > .text {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#visual > #fix_img > .imgbox > .text > .title {
+    color: #474c98;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#visual > #fix_img > .imgbox > .text > .content {
+    color: #000;
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#visual > #fix_img > .imgbox > .text > .writer {
+    color: #767676;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/*이벤트 슬라이드*/
+
+/* #visual */
+
+
+
 
 
 
