@@ -6,6 +6,8 @@ const popuppre = document.querySelector(".popuppre")
 const popupnext = document.querySelector(".popupnext")
 const product = document.querySelector("#product")
 const pag_number = document.querySelector(".pag_number")
+const banner_img = document.querySelectorAll("#banner_img > li")
+const index_number = document.querySelector(".index_number")
 
 function head_topmenuHandler(e){
     const target = e.target
@@ -34,6 +36,20 @@ function popupnextHandler(e){
     product.className = "page2"
     pag_number.innerHTML = "02-02"
 }
+
+let count = 0
+index_number.innerHTML = count
+
+function slide(){
+    let pre = count === 0 ? banner_img.length - 1 : count - 1 
+    banner_img[count].className = "on"
+    banner_img[pre].className = ""
+    
+    index_number.innerHTML = count
+    if(++count === banner_img.length) count = 0
+}
+
+setInterval(slide,2000)
 
 head_topmenu.addEventListener("click", head_topmenuHandler)
 searchinput.addEventListener("click", searchinputHandler)

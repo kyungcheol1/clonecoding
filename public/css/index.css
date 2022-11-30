@@ -99,6 +99,7 @@ a {
 #headwrap > #head_top > .head_topmenu > .on {
     position: absolute;
     transition: all 0.5s;
+    z-index: 11;
 }
 
 #headwrap > #head_top > .head_topmenu > .off {
@@ -273,6 +274,7 @@ a {
 #headwrap > #head_middle > #search > .on {
     position: absolute;
     display: block;
+    z-index: 11;
 }
 
 #headwrap > #head_middle > #search > .off {
@@ -517,6 +519,107 @@ a {
 
 /*visual*/
 
+#visualwrap {
+    width:100%;
+}
+
+#visual {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#visual > #banner {
+    margin-top: 50px;
+    width: 1200px;
+    height: 570px;
+    position: relative;
+    z-index: 1;
+}
+
+#visual > #banner > #banner_img > li {
+    position: absolute;
+    opacity: 0;
+    transition: all 2s;
+}
+
+#visual > #banner > #banner_img > .on {
+    position: absolute;
+    opacity: 1;
+    transition: all 2s;
+}
+
+#visual > #banner > #banner_img > li > a > p {
+    font-size: 34px;
+    margin-left: 50px;
+    font-weight: bold;
+    color:#000
+}
+
+#visual > #banner > #banner_img > li > a > div {
+    margin-top: 20px;
+}
+
+#visual > #fix_img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+}
+
+#visual > #fix_img > .fix_number {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    top: 50px;
+    right: 300px;
+    z-index: 10;
+}
+
+#visual > #fix_img > .fix_number > .total::before {
+    content: "-";
+    color:#ccc;
+} 
+
+#visual > #fix_img > .fix_number > .total {
+    color: #ccc;
+}
+
+#visual > #fix_img > .imgbox {
+    width: 273px;
+    height: 330px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#visual > #fix_img > .imgbox > .text {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#visual > #fix_img > .imgbox > .text > .title {
+    color: #474c98;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#visual > #fix_img > .imgbox > .text > .content {
+    color: #000;
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#visual > #fix_img > .imgbox > .text > .writer {
+    color: #767676;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/*이벤트 슬라이드*/
+
+/* #visual */
 
 
 
