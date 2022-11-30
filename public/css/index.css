@@ -617,12 +617,152 @@ a {
     margin-top: 15px;
 }
 
+/*sircle 슬라이드 , mouseover*/
+
+#visual > #sircle_Slide {
+    margin-top: 100px;
+    position: relative;
+}
+
+#visual > #sircle_Slide > button {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+#visual > #sircle_Slide > .sirclepre {
+    position: absolute;
+    left: -80px;
+    top: 40%;
+}
+
+#visual > #sircle_Slide > .sirclenext {
+    position: absolute;
+    right: -80px;
+    top: 40%;
+}
+
+#visual > #sircle_Slide > #sircle {
+    width: 1200px;
+    overflow: hidden;
+}
+
+#visual > #sircle_Slide > #sircle > #sirclelist  {
+    display: flex;
+    width: min-content;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+#visual > #sircle_Slide > #sircle > #sirclelist > li {
+    position: relative;
+    height: 270px;
+    width: 270px;
+    border-radius: 140px;
+    overflow: hidden;
+    margin: 0 15px;
+}
+
+#visual > #sircle_Slide > #sircle > #sirclelist > li:hover > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    height: 270px;
+    width: 270px;
+    background: rgba(00,00,00, 0.5);
+    top: 0px;
+    cursor: pointer;
+}
+
+
+#visual > #sircle_Slide > #sircle > #sirclelist > li > div > p{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
 /*이벤트 슬라이드*/
 
-/* #visual */
+#visual > #event_Slide > .event {
+    position: relative;
+    height: 200px;
+    margin-top: 100px;
+}
+
+#visual > #event_Slide > .event > h2 {
+    font-size: 30px;
+}
+
+#visual > #event_Slide > .event > h2 > span {
+    position: relative;
+    font-size: 16px;
+    margin: 0px 10px;
+}
+
+#visual > #event_Slide > .event > h2 > .on {
+    color: #474c98;
+}
+
+#visual > #event_Slide > .event > h2 > .on::before {
+    position: absolute;
+    font-size: 20px;
+    content: "•";
+    color: #3c9a17;
+    top: -18px;
+    left: 45%;
+}
+
+#visual > #event_Slide > .event > h2 > a {
+    display: inline-block;
+    position: absolute;
+    top:30px;
+    right: 0px;
+    font-size: 16px;
+    color: #000;
+    
+}
 
 
+#visual > #event_Slide > .event > .eventbox {
+    width: 1200px;
+    height: 150px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 40px;
+}
 
+#visual > #event_Slide > .event > div > .slide {
+    display: flex;
+}
+
+#visual > #event_Slide > .event > .btnbox {
+    position: absolute;
+    right: 50px;
+    top: 190px;
+    width: 90px;
+    height: 30px;
+    background-color: rgba(00, 00, 00, 0.5);
+    border-radius: 15px;
+    text-align: center;
+    line-height: 28px;
+    z-index: 5;
+    
+}
+
+#visual > #event_Slide > .event > .btnbox > span { 
+    font-size: 14px;
+    color: #fff;
+}
 
 
 
