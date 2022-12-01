@@ -18,6 +18,13 @@ const sircleover = document.querySelectorAll("#sircleover > li")
 const sirclepre = document.querySelector(".sirclepre")
 const sirclenext = document.querySelector(".sirclenext")
 
+const castpre = document.querySelector(".castpre")
+const castnext = document.querySelector(".castnext")
+const castpage1 = document.querySelector("#castingpage1")
+const castpage2 = document.querySelector("#castingpage2")
+console.log(castnext)
+
+
 
 function head_topmenuHandler(e){
     const target = e.target
@@ -55,7 +62,6 @@ popuppre.addEventListener("click", popuppreHandler)
 popupnext.addEventListener("click", popupnextHandler)
 
 /*banner slide */
-/**/
 
 let count = 0
 index_number.innerHTML = count
@@ -71,6 +77,28 @@ function slide(){
 
 setInterval(slide,5000)
 let sictrans = 0
+
+/*casting*/
+
+castpre.addEventListener("click", function(){
+    castpage1.classList.add('on')
+    castpage1.classList.remove("off")
+    castpage2.classList.add('off')
+    castpage2.classList.remove("on")
+    castpre.classList.add("none")
+    castnext.classList.remove("none")
+})
+
+castnext.addEventListener("click", function(){
+    console.log(11)
+    castpage2.classList.remove("off")
+    castpage2.classList.add('on')
+    castpage1.classList.remove('on')
+    castpage1.classList.add('off')
+    castnext.classList.add("none")
+    castpre.classList.remove("none")
+})
+    
 
 /*sircle slide **/
 

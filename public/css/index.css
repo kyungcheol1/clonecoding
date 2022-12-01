@@ -518,6 +518,7 @@ a {
 }
 
 /*visual*/
+/*visual*/
 
 #visualwrap {
     width: 100%;
@@ -623,19 +624,276 @@ a {
 
 /* casting 화면*/
 
-#visual > #casting > #castingpage1 {
+#visual > #casting {
     position: relative;
+    width: 100%;
+    height: 600px;
+    margin-top: 100px;
+}
+
+#visual > #casting > .castingcontent{
+    position: absolute;
+}
+
+#visual > #casting > .castingcontent.on {
+    position: absolute;
+    opacity: 1;
+    transition: all 1s;
+}
+
+#visual > #casting > .castingcontent.off {
+    position: absolute;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#visual > #casting > #castingpage1 {
     width: 100%;
     height: 500px;
     background-size: 100% 700px;
     background-image: url(https://cdn.jwplayer.com/v2/media/1EhNCyae/thumbnails/ek9si5qx.jpg);
 }
 
+#visual > #casting > #castingpage1 > #castingback {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(00, 00, 00, 0.5);
+}
+
+#visual > #casting > #castingpage1 > #castingfront {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    height: 500px;
+    top: -400px;
+}
+
+#visual > #casting > #castingpage1 > #castingfront > .contentwrap {
+    position: absolute;
+    width: 100%;
+    height: 500px;;
+}
+
+#visual > #casting > #castingpage1 > #castingfront > .contentwrap > .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+#visual > #casting > #castingpage1 > #castingfront > .contentwrap > .title > img {
+    width: 140px;
+    height: 40px;
+}
+
+#visual > #casting > #castingpage1 > #castingfront > .contentwrap > .title > span {
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#visual > #casting > #castingpage1 > #castingfront > .contentwrap > .content {
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+
+#visual > #casting > #castingpage1 > #castingfront > .contentwrap > .content > .text {
+    width: 40%;
+}
+
+#visual > #casting > #castingpage1 > #castingfront > .contentwrap > .content > .text > p {
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#visual > #casting > #castingpage1 > #castingfront > .contentwrap > .content > .text > span {
+    display: inline-block;
+    padding-top: 30px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#visual > #casting > #castingpage1 > #castingfront > .contentwrap > .content > .text > span::before{
+    content: "by ";
+    color: #f4f4f4;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#visual > #casting > #castingpage1 > #castingfront > .contentwrap > .content > .img {
+    width: 60%;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-image: url(https://cdn.jwplayer.com/v2/media/1EhNCyae/thumbnails/ek9si5qx.jpg);
+}
+
+#visual > #casting > #castingpage1 > #castingfront > .contentwrap > .content > .img > a {
+    content: "";
+    display: block;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(00, 00, 00, 0.5);
+}
+
+#visual > #casting > #castingpage1 > #castingfront > .contentwrap > .content > .img > a > img {
+    width: 70px;
+    height: 70px;
+}
+
+/*page 2*/
+
+#visual > #casting > #castingpage2 {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-size: 100% 700px;
+    background-image: url(https://cdn.jwplayer.com/v2/media/Hz8jXCpI/thumbnails/oih9ifvw.jpg);
+}
+
+#visual > #casting > #castingpage2 > #castingback {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(00, 00, 00, 0.5);
+}
+
+#visual > #casting > #castingpage2 > #castingfront {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    height: 500px;
+    top: -400px;
+}
+
+#visual > #casting > #castingpage2 > #castingfront > .contentwrap {
+    position: absolute;
+    width: 100%;
+    height: 500px;;
+}
+
+#visual > #casting > #castingpage2 > #castingfront > .contentwrap > .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+#visual > #casting > #castingpage2 > #castingfront > .contentwrap > .title > img {
+    width: 140px;
+    height: 40px;
+}
+
+#visual > #casting > #castingpage2 > #castingfront > .contentwrap > .title > span {
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#visual > #casting > #castingpage2 > #castingfront > .contentwrap > .content {
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+
+#visual > #casting > #castingpage2 > #castingfront > .contentwrap > .content > .text {
+    width: 40%;
+}
+
+#visual > #casting > #castingpage2 > #castingfront > .contentwrap > .content > .text > p {
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#visual > #casting > #castingpage2 > #castingfront > .contentwrap > .content > .text > span {
+    display: inline-block;
+    padding-top: 30px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#visual > #casting > #castingpage2 > #castingfront > .contentwrap > .content > .text > span::before{
+    content: "by ";
+    color: #f4f4f4;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#visual > #casting > #castingpage2 > #castingfront > .contentwrap > .content > .img {
+    width: 60%;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-image: url(https://cdn.jwplayer.com/v2/media/Hz8jXCpI/thumbnails/oih9ifvw.jpg);
+}
+
+#visual > #casting > #castingpage2 > #castingfront > .contentwrap > .content > .img > a {
+    content: "";
+    display: block;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(00, 00, 00, 0.5);
+}
+
+#visual > #casting > #castingpage2 > #castingfront > .contentwrap > .content > .img > a > img {
+    width: 70px;
+    height: 70px;
+}
+
+#visual > #casting > .test {
+    position: relative;
+    width: 1200px;
+    height: 400px;
+    top: -400px;
+    margin: 0 auto;
+}
+
+#visual > #casting > .test > .btns {
+    position: absolute;
+    width: 110px;
+    height: 40px;
+    top: 250px;
+    z-index: 5;
+}
+
+#visual > #casting > .test > .btns > button {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 18px;
+    background: none;
+    cursor: pointer;
+}
+
+#visual > #casting > .test > .btns > .none {
+    border: 1px solid rgba(00, 00, 00, 0.3);
+    color: rgba(00, 00, 00, 0.3);
+}
+
+
+
+
 
 /*sircle 슬라이드 , mouseover*/
 
 #visual > #contentwrap {
     width: 1200px;
+    height: 700px;
     margin: 0 auto;
 }
 
@@ -783,6 +1041,7 @@ a {
     color: #fff;
 }
 
+/*subfooter*/
 
 
 
