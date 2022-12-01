@@ -520,16 +520,20 @@ a {
 /*visual*/
 
 #visualwrap {
-    width:100%;
+    width: 100%;
 }
 
 #visual {
+    width: 100%;
+}
+
+#visual > #bannerwrap {
     width: 1200px;
     margin: 0 auto;
     position: relative;
 }
 
-#visual > #banner {
+#visual > #bannerwrap > #banner {
     margin-top: 50px;
     width: 1200px;
     height: 570px;
@@ -537,37 +541,37 @@ a {
     z-index: 1;
 }
 
-#visual > #banner > #banner_img > li {
+#visual > #bannerwrap > #banner > #banner_img > li {
     position: absolute;
     opacity: 0;
     transition: all 2s;
 }
 
-#visual > #banner > #banner_img > .on {
+#visual > #bannerwrap > #banner > #banner_img > .on {
     position: absolute;
     opacity: 1;
     transition: all 2s;
 }
 
-#visual > #banner > #banner_img > li > a > p {
+#visual > #bannerwrap > #banner > #banner_img > li > a > p {
     font-size: 34px;
     margin-left: 50px;
     font-weight: bold;
     color:#000
 }
 
-#visual > #banner > #banner_img > li > a > div {
+#visual > #bannerwrap > #banner > #banner_img > li > a > div {
     margin-top: 20px;
 }
 
-#visual > #fix_img {
+#visual > #bannerwrap > #fix_img {
     position: absolute;
     top: 0px;
     right: 0px;
     z-index: 10;
 }
 
-#visual > #fix_img > .fix_number {
+#visual > #bannerwrap > #fix_img > .fix_number {
     position: absolute;
     width: 100px;
     height: 30px;
@@ -576,16 +580,16 @@ a {
     z-index: 10;
 }
 
-#visual > #fix_img > .fix_number > .total::before {
+#visual > #bannerwrap > #fix_img > .fix_number > .total::before {
     content: "-";
     color:#ccc;
 } 
 
-#visual > #fix_img > .fix_number > .total {
+#visual > #bannerwrap > #fix_img > .fix_number > .total {
     color: #ccc;
 }
 
-#visual > #fix_img > .imgbox {
+#visual > #bannerwrap > #fix_img > .imgbox {
     width: 273px;
     height: 330px;
     background-color: white;
@@ -593,38 +597,54 @@ a {
     overflow: hidden;
 }
 
-#visual > #fix_img > .imgbox > .text {
+#visual > #bannerwrap > #fix_img > .imgbox > .text {
     padding: 20px;
     box-sizing: border-box;
 }
 
-#visual > #fix_img > .imgbox > .text > .title {
+#visual > #bannerwrap > #fix_img > .imgbox > .text > .title {
     color: #474c98;
     font-size: 13px;
     font-weight: 700;
 }
 
-#visual > #fix_img > .imgbox > .text > .content {
+#visual > #bannerwrap > #fix_img > .imgbox > .text > .content {
     color: #000;
     margin-top: 8px;
     font-size: 15px;
     font-weight: 700;
 }
 
-#visual > #fix_img > .imgbox > .text > .writer {
+#visual > #bannerwrap > #fix_img > .imgbox > .text > .writer {
     color: #767676;
     font-size: 13px;
     margin-top: 15px;
 }
 
+/* casting 화면*/
+
+#visual > #casting > #castingpage1 {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-size: 100% 700px;
+    background-image: url(https://cdn.jwplayer.com/v2/media/1EhNCyae/thumbnails/ek9si5qx.jpg);
+}
+
+
 /*sircle 슬라이드 , mouseover*/
 
-#visual > #sircle_Slide {
+#visual > #contentwrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#visual > #contentwrap > #sircle_Slide {
     margin-top: 100px;
     position: relative;
 }
 
-#visual > #sircle_Slide > button {
+#visual > #contentwrap > #sircle_Slide > button {
     width: 50px;
     height: 50px;
     border-radius: 25px;
@@ -633,31 +653,31 @@ a {
     cursor: pointer;
 }
 
-#visual > #sircle_Slide > .sirclepre {
+#visual > #contentwrap > #sircle_Slide > .sirclepre {
     position: absolute;
     left: -80px;
     top: 40%;
 }
 
-#visual > #sircle_Slide > .sirclenext {
+#visual > #contentwrap > #sircle_Slide > .sirclenext {
     position: absolute;
     right: -80px;
     top: 40%;
 }
 
-#visual > #sircle_Slide > #sircle {
+#visual > #contentwrap > #sircle_Slide > #sircle {
     width: 1200px;
     overflow: hidden;
 }
 
-#visual > #sircle_Slide > #sircle > #sirclelist  {
+#visual > #contentwrap > #sircle_Slide > #sircle > #sirclelist  {
     display: flex;
     width: min-content;
     flex-wrap: nowrap;
     overflow: hidden;
 }
 
-#visual > #sircle_Slide > #sircle > #sirclelist > li {
+#visual > #contentwrap > #sircle_Slide > #sircle > #sirclelist > li {
     position: relative;
     height: 270px;
     width: 270px;
@@ -666,7 +686,7 @@ a {
     margin: 0 15px;
 }
 
-#visual > #sircle_Slide > #sircle > #sirclelist > li:hover > div{
+#visual > #contentwrap > #sircle_Slide > #sircle > #sirclelist > li:hover > div{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -680,7 +700,7 @@ a {
 }
 
 
-#visual > #sircle_Slide > #sircle > #sirclelist > li > div > p{
+#visual > #contentwrap > #sircle_Slide > #sircle > #sirclelist > li > div > p{
     width: 70%;
     display: flex;
     align-items: center;
@@ -693,27 +713,27 @@ a {
 
 /*이벤트 슬라이드*/
 
-#visual > #event_Slide > .event {
+#visual > #contentwrap > #event_Slide > .event {
     position: relative;
     height: 200px;
     margin-top: 100px;
 }
 
-#visual > #event_Slide > .event > h2 {
+#visual > #contentwrap > #event_Slide > .event > h2 {
     font-size: 30px;
 }
 
-#visual > #event_Slide > .event > h2 > span {
+#visual > #contentwrap > #event_Slide > .event > h2 > span {
     position: relative;
     font-size: 16px;
     margin: 0px 10px;
 }
 
-#visual > #event_Slide > .event > h2 > .on {
+#visual > #contentwrap > #event_Slide > .event > h2 > .on {
     color: #474c98;
 }
 
-#visual > #event_Slide > .event > h2 > .on::before {
+#visual > #contentwrap > #event_Slide > .event > h2 > .on::before {
     position: absolute;
     font-size: 20px;
     content: "•";
@@ -722,7 +742,7 @@ a {
     left: 45%;
 }
 
-#visual > #event_Slide > .event > h2 > a {
+#visual > #contentwrap > #event_Slide > .event > h2 > a {
     display: inline-block;
     position: absolute;
     top:30px;
@@ -733,7 +753,7 @@ a {
 }
 
 
-#visual > #event_Slide > .event > .eventbox {
+#visual > #contentwrap > #event_Slide > .event > .eventbox {
     width: 1200px;
     height: 150px;
     border-radius: 20px;
@@ -741,11 +761,11 @@ a {
     margin-top: 40px;
 }
 
-#visual > #event_Slide > .event > div > .slide {
+#visual > #contentwrap > #event_Slide > .event > div > .slide {
     display: flex;
 }
 
-#visual > #event_Slide > .event > .btnbox {
+#visual > #contentwrap > #event_Slide > .event > .btnbox {
     position: absolute;
     right: 50px;
     top: 190px;
@@ -755,11 +775,10 @@ a {
     border-radius: 15px;
     text-align: center;
     line-height: 28px;
-    z-index: 5;
-    
+    z-index: 5;  
 }
 
-#visual > #event_Slide > .event > .btnbox > span { 
+#visual > #contentwrap > #event_Slide > .event > .btnbox > span { 
     font-size: 14px;
     color: #fff;
 }
