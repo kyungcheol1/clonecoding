@@ -2,10 +2,17 @@ const head_topmenu = document.querySelector(".head_topmenu")
 const head_any_button = document.querySelector("#head_any_button")
 const searchinput = document.querySelector("#searchinput")
 const search_popup = document.querySelector("#search_popup")
+
+const bannerpre = document.querySelector(".bannerpre")
+const bannernext = document.querySelector(".bannernext")
+
 const popuppre = document.querySelector(".popuppre")
 const popupnext = document.querySelector(".popupnext")
 const product = document.querySelector("#product")
 const pag_number = document.querySelector(".pag_number")
+
+const popupbutton = document.querySelector("#popupbutton")
+const popupmenu = document.querySelector("#popupmenu")
 
 const banner_img = document.querySelectorAll("#banner_img > li")
 const index_number = document.querySelector(".index_number")
@@ -22,8 +29,9 @@ const castpre = document.querySelector(".castpre")
 const castnext = document.querySelector(".castnext")
 const castpage1 = document.querySelector("#castingpage1")
 const castpage2 = document.querySelector("#castingpage2")
-console.log(castnext)
 
+const familybtn = document.querySelector(".familybtn > button")
+const family = document.querySelector(".family")
 
 
 function head_topmenuHandler(e){
@@ -61,6 +69,19 @@ function popupnextHandler(e){
 popuppre.addEventListener("click", popuppreHandler)
 popupnext.addEventListener("click", popupnextHandler)
 
+/*popupmenu */
+
+function popupmenuHandler(){
+    if(popupbutton.className === "on"){
+        popupbutton.className = ""
+        popupmenu.className = ""
+    } else {
+        popupbutton.className = "on"
+        popupmenu.className = "on"}
+}
+
+popupbutton.addEventListener("click", popupmenuHandler)
+
 /*banner slide */
 
 let count = 0
@@ -75,8 +96,111 @@ function slide(){
     if(++count === banner_img.length) count = 0
 }
 
+function bannerHandler(e){
+    clearInterval(slide)
+    const target = e.target 
+    let pre = count === 0 ? banner_img.length - 1 : count - 1 
+    let next = count === banner_img.length - 1  ? 0 : count + 1
+    if (target.className === "bannernext"){
+        banner_img[count].className = "on"
+        banner_img[pre].className = ""
+        count = next
+    } else if (target.className === "bannerpre"){
+        banner_img[count].className = "on"
+        banner_img[next].className = ""
+        count = pre
+    } index_number.innerHTML = count
+}
 setInterval(slide,5000)
+
+bannerpre.addEventListener("click", bannerHandler)
+bannernext.addEventListener("click", bannerHandler)
+
+
 let sictrans = 0
+
+/*newproduct hot new books*/ 
+
+const newbookli = document.querySelectorAll(".books > li")
+const newpre = document.querySelector(".newpre")
+const newnext = document.querySelector(".newnext")
+const booksul = document.querySelector(".books")
+
+function find(){
+    for(let i =0; i<newbookli.length; i++){
+        for(let j=0; j<4; j++){
+            if(newbookli[i].classList[j] === "on") return i
+        }
+    }
+}
+
+function nowfind(){
+    for(let i =0; i<newbookli.length; i++){
+        for(let j=0; j<4; j++){
+            if(newbookli[i].classList[j] === "now") return i
+        }
+    }
+}
+
+let newliwidth = 0
+let newtranslate = 0
+let newwidth = 0
+let newcount = 0
+
+for(let i =0 ; i<newbookli.length; i++){
+    newbookli[i].addEventListener("mouseover", function(e){
+        let now = find()
+        newbookli[i].classList.add("on")
+        if (now !== i) newbookli[now].classList.remove("on")
+        let newnow = nowfind()
+        newwitdh = newbookli[0].clientWidth + 36
+        newtranslate = -newwitdh * newnow
+        booksul.style.transform = `translateX(${newtranslate}px)`
+    })
+}
+
+for(let i =0 ; i<newbookli.length; i++){
+    newbookli[i].setAttribute("data-set", i)
+}
+
+function newbookHandler(e){
+    const target = e.target
+
+    if (target.className === "newnext"){
+        let pre = newcount
+        let renow = nowfind()
+        newwidth = newbookli[pre].clientWidth + 36
+        newtranslate += -newwidth
+        let now = ++newcount
+        newbookli[renow].classList.remove("now")
+        newbookli[now].classList.add("now")
+        booksul.style.transform = `translateX(${newtranslate}px)`
+        booksul.style.transition = "all 1000ms"
+    } else if (target.className === "newpre"){
+        let pre = newcount + 4
+        newwidth = newbookli[pre].clientWidth + 36
+        newtranslate += newwidth
+        let now = --newcount
+        let renow = nowfind()
+        newbookli[renow].classList.remove("now")
+        newbookli[now].classList.add("now")
+        booksul.style.transform = `translateX(${newtranslate}px)`
+        booksul.style.transition = "all 1000ms"
+    }
+
+    if(newtranslate < 10){
+        newpre.classList.remove("none")
+    } else if (newtranslate > -10)
+        newpre.classList.add("none")
+    if(newtranslate < -1300){
+        newnext.classList.add("none")
+    } else if (newtranslate > - 1300){
+        newnext.classList.remove("none")
+    }
+}
+
+newnext.addEventListener("click", newbookHandler)
+newpre.addEventListener("click", newbookHandler)
 
 /*casting*/
 
@@ -193,3 +317,18 @@ function eventbtnHandler(e){
 }
 
 btnbox.addEventListener("click", eventbtnHandler)
+
+
+/*footer*/ 
+
+function familybtnHandler(){
+    if(familybtn.className === "on"){
+        familybtn.className = ""
+        family.classList.remove("on")
+    } else {
+        familybtn.className = "on"
+        family.classList.add("on")
+    }
+}
+
+familybtn.addEventListener("click", familybtnHandler)
